@@ -1,0 +1,22 @@
+{
+  "name": "com.sipvlib.pool",
+  "version": "1.0.0",
+  "displayName": "SiPVLib Pool",
+  "description": "Object pooling for prefabs (bullets, VFX, UI views, enemies) behind a single static PoolManager facade, with per-prefab prewarm/max-size/auto-cleanup tuning via a PoolConfig asset.",
+  "unity": "6000.3",
+  "author": {
+    "name": "phajmvawnsix"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "sipvlib",
+    "pool"
+  ],
+  "dependencies": {
+    "com.sipvlib.config": "https://github.com/phajmvawnsix/com.sipvlib.config.git",
+    "com.sipvlib.debugging": "https://github.com/phajmvawnsix/com.sipvlib.debugging.git",
+    "com.sipvlib.event": "https://github.com/phajmvawnsix/com.sipvlib.event.git",
+    "com.sipvlib.utilities": "https://github.com/phajmvawnsix/com.sipvlib.utilities.git",
+    "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask"
+  }
+}
