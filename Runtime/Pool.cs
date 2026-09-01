@@ -115,14 +115,14 @@ namespace SiPVLib.Pool
 
         public Pool(PoolConfig config, Transform parent, Action<PooledObject> onObjectDestroyed = null)
         {
-            if (config.Prefab == null)
+            if (config.Asset == null)
             {
                 throw new NullReferenceException($"Prefab is null for pool with ID '{config.Id}'.");
             }
             _config = config;
             _parent = parent;
             _onObjectDestroyed = onObjectDestroyed;
-            _objAwakeStats = new ObjAwakeStats(config.Prefab);
+            _objAwakeStats = new ObjAwakeStats(config.Asset);
 
             if (_config.Prewarm && !_config.ManualPrewarm)
             {
@@ -184,7 +184,7 @@ namespace SiPVLib.Pool
                 return null;
             }
             
-            var newObj = Object.Instantiate(_config.Prefab, _parent);
+            var newObj = Object.Instantiate(_config.Asset, _parent);
             var pooledObj = newObj.GetComponent<PooledObject>();
             if (pooledObj == null)
             {
@@ -204,7 +204,7 @@ namespace SiPVLib.Pool
                 return null;
             }
             
-            var operation = await Object.InstantiateAsync(_config.Prefab, _parent);
+            var operation = await Object.InstantiateAsync(_config.Asset, _parent);
             var newObj = operation.GetValue(0) as GameObject;
             if  (newObj == null) return null;
             var pooledObj = newObj.GetComponent<PooledObject>();

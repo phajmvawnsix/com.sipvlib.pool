@@ -46,7 +46,7 @@ namespace SiPVLib.Pool
 
             var pool = new Pool(config, RootGameObject.transform, obj => _spawnedObjs.Remove(obj.gameObject));
             _poolsId[config.Id] = pool;
-            _poolsInstanceId[config.Prefab.GetInstanceID()] = pool;
+            _poolsInstanceId[config.Asset.GetInstanceID()] = pool;
 
             return pool;
         }

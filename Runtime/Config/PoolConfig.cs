@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using PipaPlanet.PipaPlanet.Scripts.Utilities;
 using SiPVLib.Config.Configs;
 #if ODIN_INSPECTOR
 using Sirenix.OdinInspector;
@@ -70,9 +71,8 @@ namespace SiPVLib.Pool.Config
 
         public static PoolConfig CreateRuntimeInstance(GameObject prefab)
         {
-            var poolConfig = CreateInstance<PoolConfig>();
+            var poolConfig = CreateWithAsset<PoolConfig>(prefab);
             poolConfig._id = Guid.NewGuid().ToString();
-            poolConfig._prefab = prefab;
             RuntimePoolConfigs.Add(poolConfig);
             return poolConfig;
         }
