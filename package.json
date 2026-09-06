@@ -1,13 +1,17 @@
 {
   "name": "com.sipvlib.pool",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "displayName": "SiPVLib Pool",
   "description": "Object pooling for prefabs (bullets, VFX, UI views, enemies) behind a single static PoolManager facade, with per-prefab prewarm/max-size/auto-cleanup tuning via a PoolConfig asset.",
-  "unity": "6000.3",
+  "unity": "2022.3",
   "author": {
     "name": "phajmvawnsix"
   },
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phajmvawnsix/com.sipvlib.pool.git"
+  },
   "keywords": [
     "sipvlib",
     "pool"
