@@ -6,7 +6,8 @@
         "GUID:f51ebe6a0ceec4240a699833d6309b23",
         "SiPV.Utilities",
         "SiPV.Debugging",
-        "SiPV.Event"
+        "SiPV.Event",
+        "Alchemy"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

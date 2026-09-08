@@ -1,10 +1,8 @@
 using System;
 using System.Collections.Generic;
+using Alchemy.Inspector;
 using PipaPlanet.PipaPlanet.Scripts.Utilities;
 using SiPVLib.Config.Configs;
-#if ODIN_INSPECTOR
-using Sirenix.OdinInspector;
-#endif
 using UnityEngine;
 
 namespace SiPVLib.Pool.Config
@@ -16,24 +14,18 @@ namespace SiPVLib.Pool.Config
         [SerializeField] protected bool _prewarm;
 
         [Tooltip("Number of instances to prewarm if prewarming is enabled.")]
-#if ODIN_INSPECTOR
         [ShowIf(nameof(_prewarm))]
-#endif
         [SerializeField] protected int _prewarmSize;
 
         [Tooltip("Whether to manually trigger prewarming." +
                  "If false, prewarming will be triggered automatically when the pool is created.")]
-#if ODIN_INSPECTOR
         [ShowIf(nameof(_prewarm))]
-#endif
         [SerializeField] protected bool _manualPrewarm;
 
         [Tooltip("Whether to prewarm the pool asynchronously." +
                  "If true, prewarming will be done over multiple frames to avoid performance spikes." +
                  "If false, all prewarming will be done in a single frame.")]
-#if ODIN_INSPECTOR
         [ShowIf(nameof(_prewarm))]
-#endif
         [SerializeField] protected bool _asyncPrewarm;
 
         [Tooltip("Maximum number of instances allowed in the pool." +
@@ -48,9 +40,7 @@ namespace SiPVLib.Pool.Config
         [Tooltip("Threshold (0-1) for auto cleanup." +
                  "When the percentage of active objects in the pool below this threshold, the pool will automatically clean up inactive objects." +
                  "Cleanup will remains total objects in the pool not less than prewarm size.")]
-#if ODIN_INSPECTOR
         [ShowIf(nameof(_autoCleanup))]
-#endif
         [SerializeField] protected float _cleanupThreshold = 0.5f;
 
         // ── Properties ───────────────────────────────────────────────────

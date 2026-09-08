@@ -1,6 +1,6 @@
 {
   "name": "com.sipvlib.pool",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "displayName": "SiPVLib Pool",
   "description": "Object pooling for prefabs (bullets, VFX, UI views, enemies) behind a single static PoolManager facade, with per-prefab prewarm/max-size/auto-cleanup tuning via a PoolConfig asset.",
   "unity": "2022.3",
@@ -21,6 +21,7 @@
     "com.sipvlib.debugging": "1.1.1",
     "com.sipvlib.event": "1.1.2",
     "com.sipvlib.utilities": "2.0.2",
-    "com.cysharp.unitask": "2.5.11"
+    "com.cysharp.unitask": "2.5.11",
+    "com.annulusgames.alchemy": "2.1.1"
   }
 }
